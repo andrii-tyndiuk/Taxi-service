@@ -15,19 +15,25 @@ This is the implementation of a primitive taxi service, its purpose - to show th
 
 ---
 * java 11
-* mySql
+* MySQL
 * JSP
 * JSTL
 * XML
-* tomCat
+* Tomcat
 
 ### To run the program
 
 ---
-1. In your computer must be installed java 11, mySql and tomCat for run this app
+1. In your computer must be installed java 11, MySQL and Tomcat for run this app
 2. Fork this project in your repo and clone it
-3. initialize your database using init_db.sql file that located in resources
-4. add your info to ConnectionUtil located in util to be able to connect to your database
-5. run this project using Tomcat's local server
+3. Initialize your database using __init_db.sql__ file that located in resources
+4. Add your info to __ConnectionUtil__ located in util to be able to connect to your database
+ ```java
+    public static final String URL = " URL ADDRESS DATABASE";
+    public static final String USERNAME = "USERNAME";
+    public static final String PASSWORD = "PASSWORD";
+    public static final String JDBC_DRIVER = "JDBC_DRIVER";
+```
+5. Run this project using Tomcat's local server
 
 If the program was launched successfully, you need to register or log in to the received web page to use all the features of the program
