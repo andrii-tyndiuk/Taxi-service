@@ -3,10 +3,13 @@
 # Taxi service
 
 
+
+###Run online version deployment on Heroku
+https://taxi-serwice.herokuapp.com
 ### Description
 
 ---
-This is the implementation of a primitive taxi service, its purpose - to show the ability to build a three-tier web application:
+This is the implementation of a taxi service for drivers, its purpose - to show the ability to build a three-tier web application:
 * level controllers - for communication with the user
 * level service - the main logic of the program
 * level DAO - to communicate the program with the database
