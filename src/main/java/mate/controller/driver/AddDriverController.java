@@ -5,6 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import mate.lib.Injector;
 import mate.model.Driver;
 import mate.service.DriverService;
@@ -35,6 +36,10 @@ public class AddDriverController extends HttpServlet {
             Driver driver = new Driver(name, licenseNumber, login, password);
             driverService.create(driver);
             logger.info("Added new driver with login: " + login);
+            HttpSession session = req.getSession();
+            if (session.getAttribute("driverId") == null) {
+                session.setAttribute("driverId", driver.getId());
+            }
             req.getRequestDispatcher("/WEB-INF/views/success.jsp").forward(req, resp);
         } else {
             req.setAttribute("errorMessage", "Different password and repeat password");
